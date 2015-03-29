@@ -1,0 +1,44 @@
+{{!< default}}
+<article class="article">
+  {{#post}}
+  {{#if image}}
+    <a href="{{url}}" class="imgLink"><img src="{{image}}" class="articleImage"></a>
+  {{/if}}
+  <a href="{{url}}" class="articleHeading"><h3>{{title}}</h3></a>
+  <div class="articleText">
+    {{content}}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = '{{> "disqus_name"}}';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <div class="articleFooter clearfix">
+    <div class="articleInfo">
+      <div class="articleAuthor">
+        {{author}}
+      </div>
+      <div class="articleDate">
+        {{date}}
+      </div>
+      <div class="articleTags">
+        {{#foreach tags}}
+          <a href="{{url}}">{{name}}</a>
+        {{/foreach}}
+      </div>
+      <div class="socialMedia">
+        <a href="http://www.facebook.com/share.php?u={{url absolute="true"}}" class="socialLink"><img src="{{asset "img/social/facebook.png"}}" class="socialImg"></a>
+
+        <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" class="socialLink"><img src="{{asset "img/social/twitter.png"}}" class="socialImg"></a>
+
+        <a href="https://plus.google.com/share?url=test{{url absolute=true}}" class="socialLink"><img src="{{asset "img/social/googleplus.png"}}" class="socialImg"></a>
+      </div>
+    </div>
+  </div>
+  {{/post}}
+</article>

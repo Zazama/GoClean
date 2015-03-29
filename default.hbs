@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{meta_description}}">
+    <meta name="viewport", content="width=device-width, initial-scale=1">
+
+    <title>{{meta_title}}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+    {{ghost_head}}
+  </head>
+  <body class="clearfix">
+    <header class="header clearfix">
+      <nav class="nav contentSize">
+        <div class="title">
+          <a href="{{@blog.url}}"><h3>{{@blog.title}}</h3></a>
+        </div>
+        <div class="navigation">
+          {{navigation}}
+        </div>
+      </nav>
+    </header>
+    <div class="content contentSize clearfix">
+      <div class="articles">
+        {{{body}}}
+      </div>
+      <aside class="sidebar">
+        <div class="aboutAuthor">
+          <div class="sideHeadingAuthor">
+            <p>About me</p>
+          </div>
+          <div class="sideAboutTheAuthor">
+            {{#if post}}
+              {{#post}}
+    		  	<p>{{author.name}}</p>
+    		  	<img src="{{author.image}}" class="authorImg">
+            	<p>{{author.bio}}</p>
+			  {{/post}}
+			{{/if}}
+			{{#if posts}}
+			  {{#foreach posts}}
+			    {{#if @first}}
+    		      <p>{{author.name}}</p>
+    		      <img src="{{author.image}}" class="authorImg">
+                  <p>{{author.bio}}</p>
+    		    {{/if}}
+    		  {{/foreach}}
+			{{/if}}
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer class="footer">
+      <span>Website &copy; </span><span id="setDate">2015</span><span> {{@blog.title}} | Code and Design by <a href="http://zazama.de/" target="_BLANK">Jan Metzger</a></span>
+    </footer>
+
+    <script type="text/javascript">
+      var getDate = new Date();
+      document.getElementById('setDate').innerHTML = getDate.getFullYear();
+    </script>
+  </body>
+</html>

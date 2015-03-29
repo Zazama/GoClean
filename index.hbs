@@ -1,0 +1,35 @@
+{{!< default}}
+{{#foreach posts}}
+<article class="article">
+  {{#if image}}
+    <a href="{{url}}" class="imgLink"><img src="{{image}}" class="articleImage"></a>
+  {{/if}}
+  <a href="{{url}}" class="articleHeading"><h3>{{title}}</h3></a>
+  <div class="articleText">
+    <p>{{excerpt words="100"}}<span>...</span></p>
+  </div>
+  <div class="articleFooter clearfix">
+    <div class="articleInfo">
+      <div class="articleAuthor">
+        {{author}}
+      </div>
+      <div class="articleDate">
+        {{date}}
+      </div>
+      <div class="articleTags">
+        {{#foreach tags}}
+          <a href="{{url}}">{{name}}</a>
+        {{/foreach}}
+      </div>
+      <div class="socialMedia">
+        <a href="http://www.facebook.com/share.php?u={{url absolute="true"}}" class="socialLink"><img src="{{asset "img/social/facebook.png"}}" class="socialImg"></a>
+
+        <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" class="socialLink"><img src="{{asset "img/social/twitter.png"}}" class="socialImg"></a>
+
+        <a href="https://plus.google.com/share?url=test{{url absolute=true}}" class="socialLink"><img src="{{asset "img/social/googleplus.png"}}" class="socialImg"></a>
+      </div>
+    </div>
+  </div>
+</article>
+{{/foreach}}
+{{pagination}}

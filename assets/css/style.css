@@ -24,7 +24,7 @@ a {
 /* Page wide */
 .contentSize {
 	width: 95%;
-	max-width: 1100px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -108,7 +108,7 @@ a {
 
 .articleImage {
 	width: 100%;
-	max-height: 350px;
+	max-height: 450px;
 }
 
 .articleHeading {
@@ -210,17 +210,18 @@ a {
     padding-left: 1em;
 }
 
-.articleText pre code, .articleText pre {
+.articleText pre {
     color: rgb(108, 108, 108);
     padding: 1em;
     background-color: rgb(247, 247, 247);
     border-radius: 0.5em;
     border: 1px solid rgb(223, 223, 223);
     overflow-x: auto;
+    margin: 1em 0;
 }
 
-.articleText pre {
-    margin: 1em 0;
+.articleText pre code {
+    background-color: transparent !important;
 }
 
 .articleText hr {

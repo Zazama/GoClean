@@ -17,6 +17,26 @@
       })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div class="nextprev_post clearfix">
+      <div class="prev_post">
+        {{#prev_post}}
+          <a href="{{url}}">
+            <img src="{{image}}">
+            <div class="nextprev_darkener"></div>
+            <span>{{title}}</span>
+          </a>
+        {{/prev_post}}
+      </div>
+      <div class="next_post">
+        {{#next_post}}
+          <a href="{{url}}">
+            <img src="{{image}}">
+            <div class="nextprev_darkener"></div>
+            <span>{{title}}</span>
+          </a>
+        {{/next_post}}
+      </div>
+    </div>
   </div>
   <div class="articleFooter clearfix">
     <div class="articleInfo">

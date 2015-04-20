@@ -246,10 +246,13 @@ a {
 	position: relative;
 	display: block;
 	width: 49%;
+	height: 200px;
 }
 
 .nextprev_post .prev_post img, .nextprev_post .next_post img {
 	display: block;
+	height: 100%;
+	width: 100%;
 }
 
 .nextprev_post .prev_post a {

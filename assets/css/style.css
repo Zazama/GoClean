@@ -372,7 +372,11 @@ a {
 	overflow: hidden;
 }
 
-.sideHeadingAuthor {
+.sidebar > div {
+	margin-bottom: 2em;
+}
+
+.sideHeading {
 	background-color: rgb(45, 53, 66);
 	color: rgb(255, 255, 255);
 	font-size: 1.2em;
@@ -381,7 +385,7 @@ a {
 	padding: 0.5em 0;
 }
 
-.sideAboutTheAuthor {
+.sideContent {
 	text-align: center;
 	padding: 1em 5%;
 	background-color: white;
@@ -411,6 +415,41 @@ a {
 
 .socialAuthorImg {
 	width: 15%;
+}
+
+.aside-latest h4 {
+    display: none;
+}
+
+.aside-latest li {
+    list-style-type: none;
+    /*border-left: 1px solid #8E8E8E;*/
+    transition: border-left 0.2s ease-out;
+    margin:;
+}
+
+.aside-latest li:hover {
+    /*border-left: 1px solid #f26c4f;*/
+}
+
+.aside-latest li a {
+    display: inline-block;
+    padding-left: 20px;
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+
+.aside-latest li a:hover {
+    color: #f26c4f;
+}
+
+.aside-latest hr {
+    margin: 5px 0;
+}
+
+.aside-latest hr:last-child {
+	border: 0 none;
 }
 
 @media screen and (max-width: 1100px) {

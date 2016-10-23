@@ -2,7 +2,8 @@
 Clean and Responsive Ghost Theme
 
 It supports the latest updates and has the navigation helper implemented.
-New version makes use of the get helper to display latest posts on all pages. Enabled it in your Labs settings to display latest posts in the right sidebar.
+New version makes use of the get helper to display latest posts on all pages.
+Enable it in your Labs settings to display latest posts in the right sidebar.
 
 You can find a demo here: http://www.zazama.de/
 
